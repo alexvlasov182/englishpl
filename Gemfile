@@ -7,12 +7,11 @@ gem 'rails', '~> 5.2.8'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
+gem 'haml-rails', '~> 1.0'
 gem 'uglifier', '>= 1.3.0'
-
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
@@ -29,8 +28,11 @@ end
 group :test do
 
   gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
   gem 'chromedriver-helper'
+  gem 'rails-controller-testing'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers', '4.0.0.rc1'
+
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
