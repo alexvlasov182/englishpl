@@ -1,15 +1,19 @@
-development:
+default: &default
   adapter: postgresql
   encoding: unicode
-  database: englishpl_2022
   pool: 5
-  username:
-  password:
+
+development:
+  <<: *default
+  database: englishpl_2022
+
 
 test:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: englishpl_2022
-  pool: 5
+
+production:
+  <<: *default
+  database: englishpl_2022
   username:
   password:
